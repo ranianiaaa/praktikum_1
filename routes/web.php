@@ -17,3 +17,32 @@ Route::get('/orangtua', function () {
 Route::get('/sekolah', function () { 
     return view('sekolah');
 });
+
+Route::get('/apaya', function () { 
+    $nama = "jane doe";
+    //return view('biodata.data', compact('nama'));
+    return view('biodata.data', ['nyamah' => $nama]);
+});
+
+Route::get('/coba', function () { 
+    $judul = "BIODATA";
+    $nama = "Rania nurzaneta amirah";
+    $tl = "Lamongan, 10 november 2006";
+    $nim = "253778866";
+    $prodi = "Manajemen infroatika";
+    $jurusan = "Teknologi informasi";
+    $alamat = "jln.giyasanta";
+    $hp = "09876117";
+    //return view('biodata.data', compact('nama'));
+    return view('biodata.biodata', ['judul' => $judul,
+        'nama' => $nama,
+        'tl' => $tl,
+        'nim' => $nim,
+        'prodi' => $prodi,
+        'jurusan' => $jurusan,
+        'alamat' => $alamat,
+        'hp' => $hp,]);
+});
+
+
+
